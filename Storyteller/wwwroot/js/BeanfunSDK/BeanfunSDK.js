@@ -55,9 +55,11 @@ var SaveUserData = function (UserOpenID, SaveUserName, SaveUserImg) {
             console.log(jdata);
             console.log(typeof (jdata));
             console.log(jdata.displayAchievement);
+            jdata.forEach(Element => console.log(Element));
+            jdata.forEach(Element => console.log(Element));
             
             var AchievementName = document.getElementById('AchievementName');
-            AchievementName.innerHTML = jdata.displayAchievement;
+            AchievementName.innerHTML = 'test';
             
         },
         error: function () {
