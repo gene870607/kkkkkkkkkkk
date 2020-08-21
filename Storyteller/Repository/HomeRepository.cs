@@ -64,7 +64,7 @@ namespace Storyteller.Repository
             using (conn = new SqlConnection(connString))
             {
                 string sql = @"select TOP 10
-                                u.UserID,u.UserName,u.UserImg,ud.UserScore,ud.DisplayAchievement
+                                u.UserID,u.UserName,u.UserImg,ud.UserScore
                                 from [User] u 
                                 inner join UserData ud ON ud.UserID = u.UserID
                                 order by ud.UserScore desc";
