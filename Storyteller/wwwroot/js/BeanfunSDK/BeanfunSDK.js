@@ -52,6 +52,7 @@ var SaveUserData = function (UserOpenID, SaveUserName, SaveUserImg) {
         type: 'post',
         success: function (jdata) {
             console.log("可以塞成就了 HTML我要進去搂");
+            console.log(jdata);
         },
         error: function () {
             console.log("失敗了啦");
