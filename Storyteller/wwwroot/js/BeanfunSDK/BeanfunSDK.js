@@ -54,6 +54,7 @@ var SaveUserData = function (UserOpenID, SaveUserName, SaveUserImg) {
             console.log("可以塞成就了 HTML我要進去搂");
             console.log(jdata);
             console.log(typeof (jdata));
+            console.log(jdata.displayAchievement);
             
             var AchievementName = document.getElementById('AchievementName');
             AchievementName.innerText = jdata.displayAchievement;
