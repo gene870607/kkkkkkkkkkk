@@ -52,15 +52,10 @@ var SaveUserData = function (UserOpenID, SaveUserName, SaveUserImg) {
         type: 'post',
         success: function (jdata) {
             console.log("可以塞成就了 HTML我要進去搂");
-            console.log(jdata);
-            console.log(typeof (jdata));
-            console.log(jdata.displayAchievement);
-            jdata.forEach(Element => console.log(Element));
-            jdata.forEach(Element => console.log(Element));
-            
-            var AchievementName = document.getElementById('AchievementName');
-            AchievementName.innerHTML = 'test';
-            
+            jdata.forEach(Element => {
+                var AchievementName = document.getElementById('AchievementName');
+                AchievementName.innerHTML = Element.displayAchievement;
+            });       
         },
         error: function () {
             console.log("失敗了啦");
