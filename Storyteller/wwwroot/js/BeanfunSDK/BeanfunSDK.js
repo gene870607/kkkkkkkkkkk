@@ -55,7 +55,7 @@ var SaveUserData = function (UserOpenID, SaveUserName, SaveUserImg) {
             jdata.forEach(Element => {
                 var AchievementName = document.getElementById('AchievementName');
                 AchievementName.innerHTML = Element.displayAchievement;
-            });       
+            });
         },
         error: function () {
             console.log("失敗了啦");
