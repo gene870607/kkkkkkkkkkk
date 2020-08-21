@@ -53,7 +53,11 @@ var SaveUserData = function (UserOpenID, SaveUserName, SaveUserImg) {
         success: function (jdata) {
             console.log("可以塞成就了 HTML我要進去搂");
             console.log(jdata);
-            console.log(typeof(jdata));
+            console.log(typeof (jdata));
+            
+            var AchievementName = document.getElementById('AchievementName');
+            AchievementName.innerText = jdata.displayAchievement;
+            
         },
         error: function () {
             console.log("失敗了啦");
