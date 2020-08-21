@@ -96,6 +96,21 @@ namespace Storyteller.Repository
             return TopScript;
         }
 
+        public IEnumerable<AchievementViewModel> GetAchievement(string UserID)
+        {
+            IEnumerable<AchievementViewModel> Achievement;
+            using (conn = new SqlConnection(connString))
+            {
+                string sql = @$"select 
+                                u.UserID,ud.DisplayAchievement
+                                from [User] u 
+                                inner join UserData ud ON ud.UserID = u.UserID
+                                where u.UserID = {UserID}";
+                Achievement = conn.Query<AchievementViewModel>(sql);
+            }
+            return Achievement;
+        }
+
         public List<CategoryViewModel> GetCategoryScript(string categoryID)
         {
             List<CategoryViewModel> CategoryScript;

@@ -29,6 +29,10 @@ namespace Storyteller.Services
 
             return homeViewModel;
         }
+        public IEnumerable<AchievementViewModel> GetAchievement(string UserID)
+        {
+            return _homeRepository.GetAchievement(UserID);
+        }
 
         public IEnumerable<CategoryViewModel> GetCategoryScript(string categoryID)
         {

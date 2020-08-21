@@ -31,6 +31,14 @@ namespace Storyteller.Controllers
             return View(result);
         }
 
+        [HttpPost]
+        public IEnumerable<AchievementViewModel> Achievement(string UserID)
+        {
+            var result = _homeService.GetAchievement(UserID);
+            return result;
+        }
+
+
         [Route("Home/Category/{id}")]
         public IActionResult Category(string id)
         {

@@ -43,7 +43,21 @@ var SaveUserData = function (UserOpenID, SaveUserName, SaveUserImg) {
         UserName: SaveUserName,
         UserImg: SaveUserImg
     }
-    
+
+    $.ajax({
+        url: '/Home/Achievement',
+        data: {
+            UserID: UserOpenID
+        },
+        type: 'post',
+        success: function (jdata) {
+            console.log("可以塞成就了 HTML我要進去搂");
+        },
+        error: function () {
+            console.log("失敗了啦");
+        }
+    })
+
     $.ajax({
         url: '/Home/SaveUserData',
         data: { jdata: JSON.stringify(User) },
